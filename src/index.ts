@@ -6,7 +6,7 @@ import databaseConfig from './config/database'
 // import UserRouter from './api/users/user.router'
 // import databaseConfig from './config/database';
 
-
+dotenv.config()
 
 const con = mysql.createConnection(databaseConfig)
 
@@ -15,7 +15,7 @@ con.connect(function (err) {
   console.log('Connected!')
 })
 
-dotenv.config()
+
 
 const app = express()
 app.use(express.json())
